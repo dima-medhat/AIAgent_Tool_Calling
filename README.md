@@ -20,11 +20,9 @@
 - [File Descriptions](#-file-descriptions)
 - [Screenshots](#-screenshots)
 - [Future Improvements](#-future-improvements)
-- [Security Notes](#-security-notes)
 - [What This Project Demonstrates](#-what-this-project-demonstrates)
-- [Author](#-author)
 - [Acknowledgments](#-acknowledgments)
-- [Project Status](#-project-status)
+
 
 ---
 
@@ -291,14 +289,13 @@ The application is organized into separate components:
     ├── images/
     │   ├── Tool_Calling_Chatbot_home.png
     │   └── Tool_Calling_Chatbot.png
+    |   ├── architecture_diagram.png
     │
     ├── app.py
     ├── requirements.txt
     ├── .env
-    ├── .env.example
     ├── .gitignore
     ├── README.md
-    ├── architecture_diagram.png
     ├── test_gemini.py
     └── test_models.py
 
@@ -363,8 +360,6 @@ It supports mathematical expressions such as:
     sin(pi / 2)
     log(10)
 
-The tool uses a restricted environment and character whitelist to limit what can be evaluated.
-
 ### `tools/search_tool.py`
 
 Implements the web search tool using DuckDuckGo.
@@ -397,34 +392,6 @@ Used to test whether the Gemini integration is working correctly.
 ### `test_models.py`
 
 Used to test and inspect available Gemini models.
-
-### `architecture_diagram.png`
-
-Contains the system architecture diagram showing how the Streamlit application, Gemini agent, tools, and conversation memory interact.
-
----
-
-## 💬 Conversation Management
-
-Each chat session has its own conversation memory.
-
-When a new chat is created:
-
-    New Chat
-       │
-       ▼
-    Unique Chat ID
-       │
-       ▼
-    ConversationBufferMemory
-       │
-       ▼
-    Independent Conversation
-
-This allows multiple conversations to exist independently during the Streamlit session.
-
-Chat titles are automatically generated from the first user message using Gemini.
-
 ---
 
 ## 🖼️ Screenshots
@@ -451,27 +418,12 @@ Possible improvements include:
 | 📊 **Tool Usage Statistics**     | Track how often each tool is used                         |
 | ⚠️ **Better Error Handling**     | Provide clearer user-friendly error messages              |
 | 📥 **Export Chats**              | Export conversations as TXT or PDF                        |
-| 🎤 **Voice Input**               | Add speech-to-text functionality                          |
 | 🔐 **Improved API Key Handling** | Use a more secure authentication approach                 |
 | 💬 **Streaming Responses**       | Display responses progressively                           |
 | 🗄️ **Persistent Chat History**   | Preserve conversations after restarting the application   |
 
 ---
 
-## ⚠️ Security Notes
-
-This project is intended as a learning and portfolio project.
-
-### API Keys
-
-Never commit API keys to GitHub.
-
-Your `.gitignore` should include:
-
-    .env
-    venv/
-    __pycache__/
-    *.pyc
 
 ### Calculator Tool
 
@@ -496,38 +448,8 @@ This project demonstrates practical understanding of:
 - Conversation memory
 - Streamlit application development
 - API integration
-- Environment variables
 - Modular Python project structure
 - Error handling
-- Basic security considerations
-
-The key concept is that an LLM does not have to perform every task itself.
-
-Instead, it can decide:
-
-    "What does the user need?"
-             ↓
-    "Do I need an external tool?"
-             ↓
-    "Which tool should I use?"
-             ↓
-    "Use the tool"
-             ↓
-    "Interpret the result"
-             ↓
-    "Give the user the final answer"
-
----
-
-## 👤 Author
-
-**Dalya Medhat Alshurafa**
-
-AI & Frontend Development Enthusiast
-
-- GitHub: [GitHub Profile](https://github.com/yourusername)
-- LinkedIn: [LinkedIn Profile](https://linkedin.com/in/yourprofile)
-
 ---
 
 ## 🙏 Acknowledgments
@@ -539,29 +461,3 @@ AI & Frontend Development Enthusiast
 - [WeatherAPI](https://www.weatherapi.com/) — Real-time weather data
 
 ---
-
-## 📌 Project Status
-
-**Status: Completed ✅**
-
-The project currently includes:
-
-- ✅ Gemini-powered AI agent
-- ✅ Calculator tool
-- ✅ Weather tool
-- ✅ Web search tool
-- ✅ Automatic tool selection
-- ✅ Conversation memory
-- ✅ Multiple chat sessions
-- ✅ Automatic chat titles
-- ✅ Streamlit interface
-- ✅ Gemini testing script
-- ✅ Model testing script
-- ✅ Architecture diagram
-- ✅ Project documentation
-
----
-
-## 📄 License
-
-This project was created for educational and portfolio purposes.
