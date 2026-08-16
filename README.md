@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/31120450/README.md)
+
 # 🤖 AI Agent with Tool Calling
 
 > An intelligent assistant that autonomously decides when to use external tools — built with **LangChain**, **Google Gemini**, and **Streamlit**.
