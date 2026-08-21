@@ -3,6 +3,9 @@
 
 > An intelligent assistant that autonomously decides when to use external tools — built with **LangChain**, **Google Gemini**, and **Streamlit**.
 
+## 🚀 Live Demo
+👉 [Open the Live Demo](https://prompt-playground-project.streamlit.app/)
+
 ---
 
 ## 📋 Table of Contents
